@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name = "student" namespace = "/student" extends = "netctoss">
+		<!-- 跳转到登录页面的Action，不写class,struts将默认调用ActionSupport,这个类中有方法execute,
+		该方法返回值为success
+-->
+		<action name = "findStudent" class = "cn.edu.tzc.action.FindAllStudentMsgAction">
+		<result name = "ok">
+		/user/tables.jsp
+		</result>
+		<result name = "error">
+		/user/login.jsp
+		</result>
+		</action>
+		
+		
+		<action name = "refreshClassMsg" class = "cn.edu.tzc.action.RefreshClassMsgAction">
+		<result name = "ok">
+		/user/tables.jsp
+		</result>
+		<result name = "error">
+		/user/login.jsp
+		</result>
+		<result name = "noId" type="redirectAction">
+		toFindAllClass
+		</result>
+		</action>
+		
+		<action name = "findAllClass" class = "cn.edu.tzc.action.FindAllClassAction">
+		<result name = "ok">
+		/user/tables.jsp
+		</result>
+		<result name = "error">
+		/user/login.jsp
+		</result>
+		</action>
+		
+		<action name = "selectClass" class = "cn.edu.tzc.action.SelectClassAction">
+		<result name = "ok">
+		/user/tables.jsp
+		</result>
+		<result name = "error">
+		/user/login.jsp
+		</result>
+		</action>
+		
+		<action name = "toFindAllClass" class = "cn.edu.tzc.action.FindAllClassAction">
+		<result name = "ok">
+		/user/selectClass.jsp
+		</result>
+		<result name = "error">
+		/user/login.jsp
+		</result>
+		</action>
+		
+		<action name="toHome">
+		<result>
+		/user/index.jsp
+		</result>
+		</action>
+		
+		<action name="toCalendar">
+		<result>
+		/user/calendar.jsp
+		</result>
+		</action>
+		
+		<action name="toBlank">
+		<result>
+		/user/blank.jsp
+		</result>
+		</action>
+		
+	</package>
+</struts>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<!-- 定义通用package,封装通用组件 -->
+	<package name = "netctoss" extends = "json-default" >
+	<interceptors>
+		<interceptor name = "login" class = "cn.edu.tzc.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name = "loginStack">
+				<interceptor-ref name = "login"></interceptor-ref>	
+				<interceptor-ref name = "defaultStack"></interceptor-ref>	
+			</interceptor-stack>
+	</interceptors>
+	<default-interceptor-ref name = "loginStack"></default-interceptor-ref> 
+		<!-- 定义全局的result -->
+	<global-results>
+		<result name = "login" type = "redirectAction">
+			<param name="namespace">/login</param>
+			<param name="actionName">toLogin</param>
+		</result>
+		<result name = "error">
+			
+		</result>
+	</global-results>
+	</package>
+	</struts>

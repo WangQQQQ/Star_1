@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!--
+			登录模块配置，通常以模块关键字命名package
+ -->
+	<package name = "login" namespace = "/login" extends = "json-default">
+		<!-- 跳转到登录页面的Action，不写class,struts将默认调用ActionSupport,这个类中有方法execute,
+		该方法返回值为success
+-->
+		<action name = "toLogin">
+		<result name = "success">
+		/user/login.jsp
+		</result>
+		</action>
+		<action name = "login" class = "cn.edu.tzc.action.LoginAction">
+		<result name = "ok">
+		/user/selectClass.jsp
+		</result>
+		<result name = "fail">
+		/user/login.jsp
+		</result>
+		</action>
+		<action name = "createValidateCode" class = "cn.edu.tzc.action.CreateValidateCodeAction">
+		<result name = "ok" type = "stream">
+		<param name = "inputName">imageStream</param>
+		</result>
+		</action>
+		
+	</package>
+</struts>
