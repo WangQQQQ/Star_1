@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/com/jxm/mmseg4j/CharNode.java=UTF-8
+encoding//src/com/jxm/mmseg4j/Chunk.java=UTF-8
+encoding//src/com/jxm/mmseg4j/ComplexSeg.java=UTF-8
+encoding//src/com/jxm/mmseg4j/Dictionary.java=UTF-8
+encoding//src/com/jxm/mmseg4j/MMSeg.java=UTF-8
+encoding//src/com/jxm/mmseg4j/MaxWordSeg.java=UTF-8
+encoding//src/com/jxm/mmseg4j/Seg.java=UTF-8
+encoding//src/com/jxm/mmseg4j/Sentence.java=UTF-8
+encoding//src/com/jxm/mmseg4j/SimpleSeg.java=UTF-8
+encoding//src/com/jxm/mmseg4j/Word.java=UTF-8
+encoding//src/com/jxm/mmseg4j/rule/LargestAvgLenRule.java=UTF-8
+encoding//src/com/jxm/mmseg4j/rule/LargestSumDegreeFreedomRule.java=UTF-8
+encoding//src/com/jxm/mmseg4j/rule/MaxMatchRule.java=UTF-8
+encoding//src/com/jxm/mmseg4j/rule/Rule.java=UTF-8
+encoding//src/com/jxm/mmseg4j/rule/SmallestVarianceRule.java=UTF-8
