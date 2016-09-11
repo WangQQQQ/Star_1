@@ -1,0 +1,9 @@
+package com.hairdress.datasource;
+
+public class Test {
+
+	public static void main(String[] args) {
+		System.out.println(ConnectionFactory.getConnection());
+	}
+
+}
